@@ -1,4 +1,4 @@
-#ifndef POINT_H
+О╩©#ifndef POINT_H
 #define POINT_H
 
 #include <QWidget>
@@ -40,7 +40,7 @@ private:
 	QPoint m_ref_pos;
 };
 
-Point::Position horizontalPos(Point::Position p); // к╝ф╫╥жа©
-Point::Position verticalPos(Point::Position p);   // ╢╧ж╠╥жа©
+Point::Position horizontalPos(Point::Position p); // Ф╟╢Е╧ЁЕ┬├И┤▐
+Point::Position verticalPos(Point::Position p);   // Е·┌Г⌡╢Е┬├И┤▐
 
 #endif // POINT_H

@@ -1,4 +1,4 @@
-#include "testtreewidget.h"
+ï»¿#include "testtreewidget.h"
 #include <QTreeWidget>
 #include <QMenuBar>
 #include <QMouseEvent>
@@ -39,14 +39,14 @@ testTreeWidget::~testTreeWidget()
 void testTreeWidget::creatUi()
 {
 
-	setWindowTitle(QString::fromLocal8Bit("ÎÄ±¾±à¼­Æ÷(×óÆÁ)"));
+	setWindowTitle(QString::fromLocal8Bit("æ–‡æœ¬ç¼–è¾‘å™¨(å·¦å±)"));
 	QMenuBar* menuBar=new QMenuBar(this);
 	//menuBar->setGeometry(QRect(0,0,this->width(),24));
-	// 	QMenu* editMenu=new QMenu(QString::fromLocal8Bit("²åÈëÎÄ×Ö"));
-	// 	QMenu* saveMenu=new QMenu(QString::fromLocal8Bit("±£´æÎÄ×Ö"));
+	// 	QMenu* editMenu=new QMenu(QString::fromLocal8Bit("æ’å…¥æ–‡å­—"));
+	// 	QMenu* saveMenu=new QMenu(QString::fromLocal8Bit("ä¿å­˜æ–‡å­—"));
 
-	QAction* editAction = CreateAction("edit",QString::fromLocal8Bit("²åÈëÎÄ×Ö"));
-	QAction* saveAction = CreateAction("save",QString::fromLocal8Bit("±£´æÎÄ×Ö"));
+	QAction* editAction = CreateAction("edit",QString::fromLocal8Bit("æ’å…¥æ–‡å­—"));
+	QAction* saveAction = CreateAction("save",QString::fromLocal8Bit("ä¿å­˜æ–‡å­—"));
 	connect(editAction,SIGNAL(triggered()),this,SLOT(onEditTriggered()));
 	connect(saveAction,SIGNAL(triggered()),this,SLOT(onSaveTriggered()));
 
@@ -98,7 +98,7 @@ void testTreeWidget::mousePressEvent(QMouseEvent* event)
 	{
 		int event_x=event->pos().x();
 		int event_y=event->pos().y();
-		if(m_editClicked) //±à¼­ÎÄ×Ö°´Å¥Ñ¡ÖÐ£¬ÐÂ½¨ÎÄ±¾¿ò
+		if(m_editClicked) // ç¼–è¾‘æ–‡å­—æŒ‰é’®é€‰ä¸­ï¼Œæ–°å»ºæ–‡æœ¬æ¡†
 		{
 			EditLabel* texEdit=new EditLabel(this);
 			texEdit->setGeometry(event->pos().rx(),event->pos().ry(),50,50);
@@ -109,7 +109,7 @@ void testTreeWidget::mousePressEvent(QMouseEvent* event)
 			m_textEditList.append(texEdit);
 			m_editClicked=false;
 		}
-		else //±à¼­ÎÄ×Ö°´Å¥Ã»Ñ¡ÖÐ£¬Ñ¡ÔñÎÄ±¾¿ò
+		else // ç¼–è¾‘æ–‡å­—æŒ‰é’®æ²¡é€‰ä¸­ï¼Œé€‰æ‹©æ–‡æœ¬æ¡†
 		{
 			this->setCursor(Qt::ArrowCursor);
 			setEditEnable(false);
@@ -118,7 +118,7 @@ void testTreeWidget::mousePressEvent(QMouseEvent* event)
 			{
 				m_textEditList[index]->setEnabled(true);
 				QRect rect=m_textEditList[index]->geometry();
-					//µ÷ÓÃchildWidget
+					// è°ƒç”¨childWidget
 					EightPoints* points=EightPoints::instance();
 					points->attachPointsAndTextWidget(m_textEditList[index]);
 
@@ -180,7 +180,7 @@ QAction* testTreeWidget::CreateAction(QString objectName,QString text)
 //{
 // 	QPainter m_painter=new QPainter;
 // 	m_painter->begin(this);
-// 	m_painter->setPen(QPen(Qt::blue,4,Qt::DashLine));//ÉèÖÃ»­±ÊÐÎÊ½
+// 	m_painter->setPen(QPen(Qt::blue,4,Qt::DashLine));//è®¾ç½®ç”»ç¬”å½¢å¼
 // 	m_painter->setBrush(QBrush(Qt::red,Qt::SolidPattern));
 // 	m_painter->drawRect(20,20,160,160);
 // 	m_painter->end();

@@ -1,4 +1,4 @@
-#include "eightpoints.h"
+ï»¿#include "eightpoints.h"
 #include <QPainter>
 #include <QMap>
 #include <iostream>
@@ -139,6 +139,6 @@ void EightPoints::onHandleDragged(Point::Position pos, int dx, int dy)
 	m_labelwidget->move(target_pos_x, target_pos_y);
 	m_labelwidget->resize(toWidth, toHeight);
 	m_labelwidget->update();
-	//¸üĞÂlabelwidgetÖÜÎ§°Ë¸öµãµÄÎ»ÖÃ
+	//æ›´æ–°labelwidgetå‘¨å›´å…«ä¸ªç‚¹çš„ä½ç½®
 	attachPointsAndTextWidget(m_labelwidget);
 }

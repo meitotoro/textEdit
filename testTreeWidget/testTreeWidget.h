@@ -1,4 +1,4 @@
-#ifndef TESTTREEWIDGET_H
+ï»¿#ifndef TESTTREEWIDGET_H
 #define TESTTREEWIDGET_H
 #include <QFileInfoList>
 #include <QTextEdit>
@@ -30,7 +30,7 @@ private slots:
 	void onTextEditCtrlClicked();
 	void onEditTriggered();
 	void onSaveTriggered();
-	int findListIndex(QPoint point);//·µ»ØÊó±êµã»÷ÁËÄÇ¸öÎÄ±¾¿ò
+	int findListIndex(QPoint point); // è¿”å›žé¼ æ ‡ç‚¹å‡»äº†é‚£ä¸ªæ–‡æœ¬æ¡†
 	void setEditEnable(bool enable);
 	//void paintEvent(QPaintEvent *event);
 };
